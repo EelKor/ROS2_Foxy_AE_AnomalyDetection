@@ -112,11 +112,12 @@ private:
         };
 
         // 로그 출력 및 퍼블리시
+        /*
         RCLCPP_INFO(this->get_logger(), "Publishing: [%f, %f, %f, %f, %f, %f, %f, %f, %f]",
                     float_msg.data[0], float_msg.data[1], float_msg.data[2],
                     float_msg.data[3], float_msg.data[4], float_msg.data[5],
                     float_msg.data[6], float_msg.data[7], float_msg.data[8]);
-
+        */
         publisher_->publish(float_msg);
     }
 
