@@ -84,7 +84,7 @@ def main(args=None):
     # Continuously classify image at a fixed rate
     while rclpy.ok():
         tflite_classifier.classify_image()
-        time.sleep(1)
+        #time.sleep(1)
 
     tflite_classifier.destroy_node()
     rclpy.shutdown()
