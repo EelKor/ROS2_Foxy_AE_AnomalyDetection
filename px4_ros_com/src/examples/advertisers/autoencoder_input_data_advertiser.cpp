@@ -41,7 +41,7 @@
 #include <rclcpp/rclcpp.hpp>
 #include <px4_msgs/msg/sensor_combined.hpp>
 #include <px4_msgs/msg/vehicle_attitude.hpp>
-#include "std_msgs/msg/float32_multi_array.hpp"
+#include "std_msgs/msg/float64_multi_array.hpp"
 #include <cmath>
 
 
@@ -65,7 +65,7 @@ public:
             std::bind(&AutoencoderInputDataAdvertiser::attitude_callback, this, std::placeholders::_1));
 
 		// 퍼블리셔 생성
-		publisher_ = this->create_publisher<std_msgs::msg::Float32MultiArray>("/dp/out/autoencoder_inputs", 10); // dp는 data process 의 약자
+		publisher_ = this->create_publisher<std_msgs::msg::Float64MultiArray>("/dp/out/autoencoder_inputs", 10); // dp는 data process 의 약자
 
 		// 타이머 생성
 		timer_ = this->create_wall_timer(
@@ -77,6 +77,10 @@ private:
 	// SensorCombined 데이터를 처리하는 콜백 함수
 	void sensor_callback(const px4_msgs::msg::SensorCombined::SharedPtr msg)
     {
+        //timestamp_ = msg->timestamp.sec + msg->timestamp.nanosec / 1e9f; // in seconds
+        timestamp_ = msg->timestamp; // in milliseconds
+        if(prev_timestamp_ != 0) dt_ = timestamp_ - prev_timestamp_;
+        prev_timestamp_ = timestamp_;
         accel_[0] = msg->accelerometer_m_s2[0];
         accel_[1] = msg->accelerometer_m_s2[1];
         accel_[2] = msg->accelerometer_m_s2[2];
@@ -84,6 +88,7 @@ private:
         gyro_[0] = msg->gyro_rad[0];
         gyro_[1] = msg->gyro_rad[1];
         gyro_[2] = msg->gyro_rad[2];
+        RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Timestamp in microseconds: %d | dt: %d", timestamp_, dt_);
     }
 
 	// VehicleAttitude 데이터를 처리하는 콜백 함수
@@ -102,10 +107,11 @@ private:
 	// Float32MultiArray 데이터를 퍼블리시하는 함수
 	void publish_data()
     {
-        auto float_msg = std_msgs::msg::Float32MultiArray();
+        auto double_msg = std_msgs::msg::Float64MultiArray();
 
         // 데이터를 배열에 추가 (Accel, Gyro, Roll, Pitch, Yaw)
-        float_msg.data = {
+        double_msg.data = {
+            timestamp_, // timestamp
             accel_[0], accel_[1], accel_[2], // 가속도
             gyro_[0], gyro_[1], gyro_[2],   // 자이로스코프
             roll_, pitch_, yaw_             // 오일러 각
@@ -118,22 +124,25 @@ private:
                     float_msg.data[3], float_msg.data[4], float_msg.data[5],
                     float_msg.data[6], float_msg.data[7], float_msg.data[8]);
         */
-        publisher_->publish(float_msg);
+        publisher_->publish(double_msg);
     }
 
 	// 멤버 변수
     rclcpp::Subscription<px4_msgs::msg::SensorCombined>::SharedPtr sensor_combined_subscription_;
     rclcpp::Subscription<px4_msgs::msg::VehicleAttitude>::SharedPtr vehicle_attitude_subscription_;
-    rclcpp::Publisher<std_msgs::msg::Float32MultiArray>::SharedPtr publisher_;
+    rclcpp::Publisher<std_msgs::msg::Float64MultiArray>::SharedPtr publisher_;
     rclcpp::TimerBase::SharedPtr timer_;
 
 	
 	// 센서 데이터
-    float accel_[3] = {0.0f, 0.0f, 0.0f}; // 가속도
-    float gyro_[3] = {0.0f, 0.0f, 0.0f};  // 자이로스코프
+    unsigned long timestamp_ = 0;
+    unsigned long prev_timestamp_ = 0;
+    unsigned long dt_ = 0;
+    double accel_[3] = {0.0f, 0.0f, 0.0f}; // 가속도
+    double gyro_[3] = {0.0f, 0.0f, 0.0f};  // 자이로스코프
 
     // 오일러 각
-    float roll_ = 0.0f, pitch_ = 0.0f, yaw_ = 0.0f;
+    double roll_ = 0.0f, pitch_ = 0.0f, yaw_ = 0.0f;
 };
 
 
