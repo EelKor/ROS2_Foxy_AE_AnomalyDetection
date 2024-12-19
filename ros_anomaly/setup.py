@@ -20,7 +20,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'rosrf_anoamly = ros_anomaly.rostf_anomaly:main',
+            'rostf_anoamly = ros_anomaly.rostf_anomaly:main',
+            'visualization = ros_anomaly.visualization:main',
         ],
     },
 )

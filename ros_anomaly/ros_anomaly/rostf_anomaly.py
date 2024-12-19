@@ -8,7 +8,7 @@ import rclpy
 from PIL import Image
 from tensorflow.python.client import device_lib
 from rclpy.node import Node
-from std_msgs.msg import String, Float64MultiArray
+from std_msgs.msg import String, Float64MultiArray, Float64
 from ament_index_python.packages import get_package_share_directory
 
 class AutoencoderROS(Node):
@@ -27,7 +27,7 @@ class AutoencoderROS(Node):
             self.listener_callback,
             10)
         
-        self.publisher_ = self.create_publisher(Float64MultiArray, 'Detection_result', 10)
+        self.publisher_ = self.create_publisher(Float64, '/ad/out/reconstruction_error', 10)
                 
     def init_value(self):
         maxAx_ = 0.0263608272674425
@@ -95,7 +95,7 @@ class AutoencoderROS(Node):
         self.NormalizationMinMax(msg.data)
 
     def run(self):
-        if self.inputData.size != 0:
+        if self.inputData.size != 0: # Very Very Important condition, tip from D.H.Seo
             # Load TFLite model
             interpreter = tf.lite.Interpreter(model_path=self.model_path)
             interpreter.allocate_tensors()
@@ -115,9 +115,9 @@ class AutoencoderROS(Node):
             # Get output tensor
             output_data = interpreter.get_tensor(output_details[0]['index'])
             output_data = np.squeeze(output_data,axis=0)
-
-            result_msg = Float64MultiArray()
-            result_msg.data = output_data.tolist()
+            mse = np.mean(np.power((inputData_ - output_data), 2), axis=1)
+            result_msg = Float64()
+            result_msg.data = float(mse)
 
             self.publisher_.publish(result_msg)
 
