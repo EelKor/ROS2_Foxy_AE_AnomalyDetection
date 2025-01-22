@@ -6,7 +6,6 @@ import tensorflow as tf
 import rclpy
 
 from PIL import Image
-from tensorflow.python.client import device_lib
 from rclpy.node import Node
 from std_msgs.msg import String, Float64MultiArray, Float64
 from ament_index_python.packages import get_package_share_directory
@@ -74,7 +73,7 @@ class AutoencoderROS(Node):
         self.inputData = np.array([])
 
     def init_param(self):
-        self.model_path = '/home/wsl/ws_anomaly_detection/src/ros_anomaly/model/model.tflite'
+        self.model_path = '/home/jetson/ws_anomaly_detection/src/ros_anomaly/model/model.tflite'
 
     def NormalizationMinMax(self, data):        
         input_Ax = (data[1] - self.min_Ax) / (self.err_Ax)
@@ -123,7 +122,6 @@ class AutoencoderROS(Node):
 
 def main(args=None):
     rclpy.init(args=args)
-
     _run = AutoencoderROS()
 
     while rclpy.ok():
