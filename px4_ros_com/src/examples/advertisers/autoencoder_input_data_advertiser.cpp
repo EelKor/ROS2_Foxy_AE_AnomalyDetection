@@ -147,7 +147,7 @@ private:
     {
         auto double_msg = std_msgs::msg::Float64MultiArray();
 
-        // 데이터를 배열에 추가 (Accel, Gyro, Roll, Pitch, Yaw)
+        /*// 데이터를 배열에 추가 (Accel, Gyro, Roll, Pitch, Yaw)
         double_msg.data = {
             timestamp_, // timestamp
             accel_[0], accel_[1], accel_[2], // 가속도
@@ -159,6 +159,13 @@ private:
             actuator_outputs_[3],actuator_outputs_[4],actuator_outputs_[5],
             actuator_outputs_[6],actuator_outputs_[7],actuator_outputs_[8],
             actuator_outputs_[9],actuator_outputs_[10],actuator_outputs_[11]};
+*/
+        double_msg.data = {
+                timestamp_, // timestamp
+                accel_[0], accel_[1], accel_[2], // 가속도
+                gyro_[0], gyro_[1], gyro_[2],   // 자이로스코프
+                roll_, pitch_, yaw_            // 오일러 각
+                };
 
         // 로그 출력 및 퍼블리시
         /*

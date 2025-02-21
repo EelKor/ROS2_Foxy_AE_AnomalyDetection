@@ -29,29 +29,29 @@ class AutoencoderROS(Node):
         self.publisher_ = self.create_publisher(Float64, '/ad/out/reconstruction_error', 10)
                 
     def init_value(self):
-        maxAx_ = 0.0263608272674425
-        maxAy_ = 0.0264559128084445
-        maxAz_ = 23.5368741740405
+        maxAx_ = 1.69
+        maxAy_ = 1.42
+        maxAz_ = -0.0102182215826467
 
-        maxP_ = 0.557505493926602
-        maxQ_ = 0.552249716931726
-        maxR_ = 0.01424845041569
+        maxP_ = 0.99
+        maxQ_ = 1.34
+        maxR_ = 0.91
 
-        maxPhi_   = 0.265496976180982
-        maxTheta_ = 0.27155233388245
-        maxPsi_   = 0.785188210141704
+        maxPhi_   = 0.21
+        maxTheta_ = 0.22
+        maxPsi_   = 3.14
 
-        self.min_Ax = -0.0268811654409069
-        self.min_Ay = -0.0265703248054632
-        self.min_Az = 5.33848345283791
+        self.min_Ax = -1.32
+        self.min_Ay = -1.06
+        self.min_Az = -32.366
 
-        self.min_P = -0.559515425220955
-        self.min_Q = -0.55590503976407
-        self.min_R = -0.37013956720171
+        self.min_P = -1.07
+        self.min_Q = -1.20
+        self.min_R = -0.38
 
-        self.min_Phi   = -0.266343899153498
-        self.min_Theta = -0.27524570557516
-        self.min_Psi   = -0.0220543220534516
+        self.min_Phi   = -0.22
+        self.min_Theta = -0.20
+        self.min_Psi   = -3.14
 
         self.err_Ax = maxAx_ - self.min_Ax
         self.err_Ay = maxAy_ - self.min_Ay
@@ -65,10 +65,10 @@ class AutoencoderROS(Node):
         self.err_Theta = maxTheta_ - self.min_Theta
         self.err_Psi   = maxPsi_ - self.min_Psi
 
-        self.threshold = 0.12027066344921587
-        self.stdD      = 0.008686784416758167
-        self.maxMSE    = 0.1115838790324577
-        self.margin    = -1.0
+        self.threshold = 0.07968564678921582
+        self.stdD      = 0.007407137168589778
+        self.maxMSE    = 0.1167213326321647
+        self.margin    = 5.0
 
         self.inputData = np.array([])
 
