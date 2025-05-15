@@ -1,0 +1,2 @@
+[console_scripts]
+tflite_node = tflite_example.tflite_node:main

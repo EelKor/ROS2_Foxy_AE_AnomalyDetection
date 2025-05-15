@@ -1,0 +1,261 @@
+[0.000000] (-) TimerEvent: {}
+[0.001704] (-) JobUnselected: {'identifier': 'px4_msgs'}
+[0.003200] (-) JobUnselected: {'identifier': 'ros_anomaly'}
+[0.004105] (-) JobUnselected: {'identifier': 'tflite_example'}
+[0.004997] (px4_ros_com) JobQueued: {'identifier': 'px4_ros_com', 'dependencies': OrderedDict([('px4_msgs', '/root/ros2_ws/src/install/px4_msgs')])}
+[0.005609] (px4_ros_com) JobStarted: {'identifier': 'px4_ros_com'}
+[0.060804] (px4_ros_com) JobProgress: {'identifier': 'px4_ros_com', 'progress': 'cmake'}
+[0.064199] (px4_ros_com) JobProgress: {'identifier': 'px4_ros_com', 'progress': 'build'}
+[0.067330] (px4_ros_com) Command: {'cmd': ['/usr/local/bin/cmake', '--build', '/root/ros2_ws/src/build/px4_ros_com', '--', '-j4', '-l4'], 'cwd': '/root/ros2_ws/src/build/px4_ros_com', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'root'), ('SSH_CLIENT', '192.168.218.122 60042 6401'), ('LC_TIME', 'en_US.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/root/.vscode-server/cli/servers/Stable-91fa95bccb027ece6a968589bb1d662fa9c8e170/server/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/root/ros2_ws/src/install/px4_msgs/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib'), ('BROWSER', '/root/.vscode-server/cli/servers/Stable-91fa95bccb027ece6a968589bb1d662fa9c8e170/server/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/root'), ('OLDPWD', '/root/ros2_ws'), ('TERM_PROGRAM_VERSION', '1.100.1'), ('VSCODE_IPC_HOOK_CLI', '/run/user/0/vscode-ipc-14eef46a-242a-48ac-88e4-062ca2494c05.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/root/.vscode-server/cli/servers/Stable-91fa95bccb027ece6a968589bb1d662fa9c8e170/server/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'en_US.UTF-8'), ('VSCODE_GIT_ASKPASS_NODE', '/root/.vscode-server/cli/servers/Stable-91fa95bccb027ece6a968589bb1d662fa9c8e170/server/node'), ('SSL_CERT_FILE', '/usr/lib/ssl/certs/ca-certificates.crt'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/0/bus'), ('COLORTERM', 'truecolor'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'root'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '3'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/root/.vscode-server/cli/servers/Stable-91fa95bccb027ece6a968589bb1d662fa9c8e170/server/bin/remote-cli:/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/root/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand'), ('LC_ADDRESS', 'en_US.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/0'), ('SSL_CERT_DIR', '/usr/lib/ssl/certs'), ('LANG', 'en_US.UTF-8'), ('LC_TELEPHONE', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/0/vscode-git-95c1a9216d.sock'), ('TERM_PROGRAM', 'vscode'), ('AMENT_PREFIX_PATH', '/root/ros2_ws/src/install/px4_msgs:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'en_US.UTF-8'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'en_US.UTF-8'), ('LC_IDENTIFICATION', 'en_US.UTF-8'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/root/ros2_ws/src/build/px4_ros_com'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.218.122 60042 192.168.218.163 6401'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/root/ros2_ws/src/install/px4_msgs/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'en_US.UTF-8'), ('LC_PAPER', 'en_US.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/root/ros2_ws/src/install/px4_msgs:/opt/ros/foxy')]), 'shell': False}
+[0.099086] (-) TimerEvent: {}
+[0.200194] (-) TimerEvent: {}
+[0.292052] (px4_ros_com) StdoutLine: {'line': b'[ 11%] Built target frame_transforms\n'}
+[0.300376] (-) TimerEvent: {}
+[0.324299] (px4_ros_com) StdoutLine: {'line': b'[ 22%] Built target vehicle_gps_position_listener\n'}
+[0.337136] (px4_ros_com) StdoutLine: {'line': b'[ 33%] Built target debug_vect_advertiser\n'}
+[0.368165] (px4_ros_com) StdoutLine: {'line': b'[ 44%] Built target sensor_combined_listener\n'}
+[0.400589] (-) TimerEvent: {}
+[0.501396] (-) TimerEvent: {}
+[0.521455] (px4_ros_com) StdoutLine: {'line': b'[ 55%] Built target autoencoder_input_data_advertiser\n'}
+[0.540673] (px4_ros_com) StdoutLine: {'line': b'[ 66%] Built target failuire_detector\n'}
+[0.565349] (px4_ros_com) StdoutLine: {'line': b'[ 72%] \x1b[32mBuilding CXX object CMakeFiles/autoencoder_output_data_advertiser.dir/src/examples/advertisers/autoencoder_output_data_advertiser.cpp.o\x1b[0m\n'}
+[0.572749] (px4_ros_com) StdoutLine: {'line': b'[ 83%] Built target offboard_control\n'}
+[0.590180] (px4_ros_com) StdoutLine: {'line': b'[ 88%] \x1b[32mBuilding CXX object CMakeFiles/offboard_control_srv.dir/src/examples/offboard/offboard_control_srv.cpp.o\x1b[0m\n'}
+[0.601650] (-) TimerEvent: {}
+[0.702567] (-) TimerEvent: {}
+[0.803371] (-) TimerEvent: {}
+[0.904342] (-) TimerEvent: {}
+[1.005673] (-) TimerEvent: {}
+[1.106541] (-) TimerEvent: {}
+[1.207350] (-) TimerEvent: {}
+[1.308167] (-) TimerEvent: {}
+[1.409026] (-) TimerEvent: {}
+[1.509937] (-) TimerEvent: {}
+[1.610804] (-) TimerEvent: {}
+[1.711669] (-) TimerEvent: {}
+[1.812560] (-) TimerEvent: {}
+[1.913459] (-) TimerEvent: {}
+[2.014443] (-) TimerEvent: {}
+[2.115289] (-) TimerEvent: {}
+[2.216136] (-) TimerEvent: {}
+[2.317047] (-) TimerEvent: {}
+[2.418031] (-) TimerEvent: {}
+[2.518987] (-) TimerEvent: {}
+[2.620839] (-) TimerEvent: {}
+[2.722491] (-) TimerEvent: {}
+[2.825461] (-) TimerEvent: {}
+[2.926526] (-) TimerEvent: {}
+[3.027432] (-) TimerEvent: {}
+[3.128732] (-) TimerEvent: {}
+[3.229744] (-) TimerEvent: {}
+[3.331132] (-) TimerEvent: {}
+[3.433524] (-) TimerEvent: {}
+[3.534488] (-) TimerEvent: {}
+[3.635563] (-) TimerEvent: {}
+[3.736503] (-) TimerEvent: {}
+[3.837471] (-) TimerEvent: {}
+[3.938427] (-) TimerEvent: {}
+[4.039375] (-) TimerEvent: {}
+[4.140302] (-) TimerEvent: {}
+[4.241275] (-) TimerEvent: {}
+[4.342219] (-) TimerEvent: {}
+[4.443333] (-) TimerEvent: {}
+[4.544995] (-) TimerEvent: {}
+[4.646386] (-) TimerEvent: {}
+[4.747697] (-) TimerEvent: {}
+[4.849007] (-) TimerEvent: {}
+[4.950408] (-) TimerEvent: {}
+[5.051753] (-) TimerEvent: {}
+[5.153119] (-) TimerEvent: {}
+[5.254562] (-) TimerEvent: {}
+[5.356000] (-) TimerEvent: {}
+[5.457393] (-) TimerEvent: {}
+[5.558823] (-) TimerEvent: {}
+[5.660201] (-) TimerEvent: {}
+[5.761527] (-) TimerEvent: {}
+[5.862903] (-) TimerEvent: {}
+[5.963824] (-) TimerEvent: {}
+[6.064780] (-) TimerEvent: {}
+[6.165738] (-) TimerEvent: {}
+[6.267181] (-) TimerEvent: {}
+[6.368079] (-) TimerEvent: {}
+[6.469381] (-) TimerEvent: {}
+[6.570391] (-) TimerEvent: {}
+[6.671705] (-) TimerEvent: {}
+[6.772660] (-) TimerEvent: {}
+[6.873984] (-) TimerEvent: {}
+[6.974956] (-) TimerEvent: {}
+[7.076347] (-) TimerEvent: {}
+[7.177745] (-) TimerEvent: {}
+[7.200449] (px4_ros_com) StderrLine: {'line': b'\x1b[01m\x1b[K/root/ros2_ws/src/px4_ros_com/src/examples/advertisers/autoencoder_output_data_advertiser.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid AutoencoderOutputDataAdvertiser::callback(std_msgs::msg::Float64_<std::allocator<void> >::SharedPtr)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[7.201551] (px4_ros_com) StderrLine: {'line': b'\x1b[01m\x1b[K/root/ros2_ws/src/px4_ros_com/src/examples/advertisers/autoencoder_output_data_advertiser.cpp:30:33:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Krequest for member \xe2\x80\x98\x1b[01m\x1b[Ksize\x1b[m\x1b[K\xe2\x80\x99 in \xe2\x80\x98\x1b[01m\x1b[K((const std::__shared_ptr_access<std_msgs::msg::Float64_<std::allocator<void> >, __gnu_cxx::_S_atomic, false, false>*)(& msg))->std::__shared_ptr_access<std_msgs::msg::Float64_<std::allocator<void> >, __gnu_cxx::_S_atomic, false, false>::operator->()->std_msgs::msg::Float64_<std::allocator<void> >::data\x1b[m\x1b[K\xe2\x80\x99, which is of non-class type \xe2\x80\x98\x1b[01m\x1b[Kstd_msgs::msg::Float64_<std::allocator<void> >::_data_type\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Kdouble\x1b[m\x1b[K\xe2\x80\x99}\n'}
+[7.205502] (px4_ros_com) StderrLine: {'line': b'   30 |         size_t size = msg->data.\x1b[01;31m\x1b[Ksize\x1b[m\x1b[K();\n'}
+[7.208318] (px4_ros_com) StderrLine: {'line': b'      |                                 \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[7.209055] (px4_ros_com) StderrLine: {'line': b'\x1b[01m\x1b[K/root/ros2_ws/src/px4_ros_com/src/examples/advertisers/autoencoder_output_data_advertiser.cpp:37:35:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kinvalid types \xe2\x80\x98\x1b[01m\x1b[Kstd_msgs::msg::Float64_<std::allocator<void> >::_data_type {aka double}[size_t {aka long unsigned int}]\x1b[m\x1b[K\xe2\x80\x99 for array subscript\n'}
+[7.209809] (px4_ros_com) StderrLine: {'line': b'   37 |                 x[i] = msg->data[i\x1b[01;31m\x1b[K]\x1b[m\x1b[K;\n'}
+[7.210612] (px4_ros_com) StderrLine: {'line': b'      |                                   \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[7.211318] (px4_ros_com) StderrLine: {'line': b'\x1b[01m\x1b[K/root/ros2_ws/src/px4_ros_com/src/examples/advertisers/autoencoder_output_data_advertiser.cpp:38:44:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kinvalid types \xe2\x80\x98\x1b[01m\x1b[Kstd_msgs::msg::Float64_<std::allocator<void> >::_data_type {aka double}[size_t {aka long unsigned int}]\x1b[m\x1b[K\xe2\x80\x99 for array subscript\n'}
+[7.212004] (px4_ros_com) StderrLine: {'line': b'   38 |                 x_hat[i] = msg->data[i + 12\x1b[01;31m\x1b[K]\x1b[m\x1b[K;\n'}
+[7.212652] (px4_ros_com) StderrLine: {'line': b'      |                                            \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[7.213271] (px4_ros_com) StderrLine: {'line': b'\x1b[01m\x1b[K/root/ros2_ws/src/px4_ros_com/src/examples/advertisers/autoencoder_output_data_advertiser.cpp:47:29:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno match for \xe2\x80\x98\x1b[01m\x1b[Koperator=\x1b[m\x1b[K\xe2\x80\x99 (operand types are \xe2\x80\x98\x1b[01m\x1b[Kpx4_msgs::msg::AutoencoderOutputs_<std::allocator<void> >::_x_type\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Kstd::array<float, 12>\x1b[m\x1b[K\xe2\x80\x99} and \xe2\x80\x98\x1b[01m\x1b[Kstd::vector<double, std::allocator<double> >\x1b[m\x1b[K\xe2\x80\x99)\n'}
+[7.214012] (px4_ros_com) StderrLine: {'line': b'   47 |         autoencoder_msg.x = \x1b[01;31m\x1b[Kx\x1b[m\x1b[K;\n'}
+[7.216455] (px4_ros_com) StderrLine: {'line': b'      |                             \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[7.217129] (px4_ros_com) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/9/tuple:39\x1b[m\x1b[K,\n'}
+[7.217776] (px4_ros_com) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/9/bits/unique_ptr.h:37\x1b[m\x1b[K,\n'}
+[7.218558] (px4_ros_com) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/9/memory:80\x1b[m\x1b[K,\n'}
+[7.219265] (px4_ros_com) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:144\x1b[m\x1b[K,\n'}
+[7.219923] (px4_ros_com) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/root/ros2_ws/src/px4_ros_com/src/examples/advertisers/autoencoder_output_data_advertiser.cpp:1\x1b[m\x1b[K:\n'}
+[7.220578] (px4_ros_com) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/9/array:94:12:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kconstexpr std::array<float, 12>& std::array<float, 12>::operator=(const std::array<float, 12>&)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.221268] (px4_ros_com) StderrLine: {'line': b'   94 |     struct \x1b[01;36m\x1b[Karray\x1b[m\x1b[K\n'}
+[7.221964] (px4_ros_com) StderrLine: {'line': b'      |            \x1b[01;36m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[7.223328] (px4_ros_com) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/9/array:94:12:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  no known conversion for argument 1 from \xe2\x80\x98\x1b[01m\x1b[Kstd::vector<double, std::allocator<double> >\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kconst std::array<float, 12>&\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.224030] (px4_ros_com) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/9/array:94:12:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kconstexpr std::array<float, 12>& std::array<float, 12>::operator=(std::array<float, 12>&&)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.224738] (px4_ros_com) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/9/array:94:12:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  no known conversion for argument 1 from \xe2\x80\x98\x1b[01m\x1b[Kstd::vector<double, std::allocator<double> >\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kstd::array<float, 12>&&\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.225381] (px4_ros_com) StderrLine: {'line': b'\x1b[01m\x1b[K/root/ros2_ws/src/px4_ros_com/src/examples/advertisers/autoencoder_output_data_advertiser.cpp:48:33:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno match for \xe2\x80\x98\x1b[01m\x1b[Koperator=\x1b[m\x1b[K\xe2\x80\x99 (operand types are \xe2\x80\x98\x1b[01m\x1b[Kpx4_msgs::msg::AutoencoderOutputs_<std::allocator<void> >::_x_hat_type\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Kstd::array<float, 12>\x1b[m\x1b[K\xe2\x80\x99} and \xe2\x80\x98\x1b[01m\x1b[Kstd::vector<double, std::allocator<double> >\x1b[m\x1b[K\xe2\x80\x99)\n'}
+[7.226134] (px4_ros_com) StderrLine: {'line': b'   48 |         autoencoder_msg.x_hat = \x1b[01;31m\x1b[Kx_hat\x1b[m\x1b[K;\n'}
+[7.226893] (px4_ros_com) StderrLine: {'line': b'      |                                 \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[7.227544] (px4_ros_com) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/9/tuple:39\x1b[m\x1b[K,\n'}
+[7.228179] (px4_ros_com) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/9/bits/unique_ptr.h:37\x1b[m\x1b[K,\n'}
+[7.228827] (px4_ros_com) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/9/memory:80\x1b[m\x1b[K,\n'}
+[7.229493] (px4_ros_com) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:144\x1b[m\x1b[K,\n'}
+[7.230146] (px4_ros_com) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/root/ros2_ws/src/px4_ros_com/src/examples/advertisers/autoencoder_output_data_advertiser.cpp:1\x1b[m\x1b[K:\n'}
+[7.231735] (px4_ros_com) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/9/array:94:12:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kconstexpr std::array<float, 12>& std::array<float, 12>::operator=(const std::array<float, 12>&)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.232495] (px4_ros_com) StderrLine: {'line': b'   94 |     struct \x1b[01;36m\x1b[Karray\x1b[m\x1b[K\n'}
+[7.233175] (px4_ros_com) StderrLine: {'line': b'      |            \x1b[01;36m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[7.233875] (px4_ros_com) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/9/array:94:12:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  no known conversion for argument 1 from \xe2\x80\x98\x1b[01m\x1b[Kstd::vector<double, std::allocator<double> >\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kconst std::array<float, 12>&\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.234670] (px4_ros_com) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/9/array:94:12:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kconstexpr std::array<float, 12>& std::array<float, 12>::operator=(std::array<float, 12>&&)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.235352] (px4_ros_com) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/9/array:94:12:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  no known conversion for argument 1 from \xe2\x80\x98\x1b[01m\x1b[Kstd::vector<double, std::allocator<double> >\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kstd::array<float, 12>&&\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.277953] (-) TimerEvent: {}
+[7.378940] (-) TimerEvent: {}
+[7.479896] (-) TimerEvent: {}
+[7.580869] (-) TimerEvent: {}
+[7.681857] (-) TimerEvent: {}
+[7.782866] (-) TimerEvent: {}
+[7.883827] (-) TimerEvent: {}
+[7.984784] (-) TimerEvent: {}
+[8.085752] (-) TimerEvent: {}
+[8.186700] (-) TimerEvent: {}
+[8.287689] (-) TimerEvent: {}
+[8.389578] (-) TimerEvent: {}
+[8.490673] (-) TimerEvent: {}
+[8.591736] (-) TimerEvent: {}
+[8.692764] (-) TimerEvent: {}
+[8.794903] (-) TimerEvent: {}
+[8.896226] (-) TimerEvent: {}
+[8.997169] (-) TimerEvent: {}
+[9.098126] (-) TimerEvent: {}
+[9.199126] (-) TimerEvent: {}
+[9.300056] (-) TimerEvent: {}
+[9.401498] (-) TimerEvent: {}
+[9.503238] (-) TimerEvent: {}
+[9.604769] (-) TimerEvent: {}
+[9.706145] (-) TimerEvent: {}
+[9.807117] (-) TimerEvent: {}
+[9.908487] (-) TimerEvent: {}
+[10.009814] (-) TimerEvent: {}
+[10.111181] (-) TimerEvent: {}
+[10.212119] (-) TimerEvent: {}
+[10.313088] (-) TimerEvent: {}
+[10.414489] (-) TimerEvent: {}
+[10.515482] (-) TimerEvent: {}
+[10.616442] (-) TimerEvent: {}
+[10.717388] (-) TimerEvent: {}
+[10.818771] (-) TimerEvent: {}
+[10.920096] (-) TimerEvent: {}
+[11.021415] (-) TimerEvent: {}
+[11.122842] (-) TimerEvent: {}
+[11.223781] (-) TimerEvent: {}
+[11.324734] (-) TimerEvent: {}
+[11.425694] (-) TimerEvent: {}
+[11.526651] (-) TimerEvent: {}
+[11.627988] (-) TimerEvent: {}
+[11.729366] (-) TimerEvent: {}
+[11.830336] (-) TimerEvent: {}
+[11.931232] (-) TimerEvent: {}
+[12.032115] (-) TimerEvent: {}
+[12.133401] (-) TimerEvent: {}
+[12.234692] (-) TimerEvent: {}
+[12.335996] (-) TimerEvent: {}
+[12.437419] (-) TimerEvent: {}
+[12.538824] (-) TimerEvent: {}
+[12.639768] (-) TimerEvent: {}
+[12.741085] (-) TimerEvent: {}
+[12.842435] (-) TimerEvent: {}
+[12.944106] (-) TimerEvent: {}
+[13.045010] (-) TimerEvent: {}
+[13.145997] (-) TimerEvent: {}
+[13.247441] (-) TimerEvent: {}
+[13.349597] (-) TimerEvent: {}
+[13.450800] (-) TimerEvent: {}
+[13.552139] (-) TimerEvent: {}
+[13.653057] (-) TimerEvent: {}
+[13.754437] (-) TimerEvent: {}
+[13.855802] (-) TimerEvent: {}
+[13.957208] (-) TimerEvent: {}
+[14.058595] (-) TimerEvent: {}
+[14.159969] (-) TimerEvent: {}
+[14.261392] (-) TimerEvent: {}
+[14.340824] (px4_ros_com) StderrLine: {'line': b'make[2]: *** [CMakeFiles/autoencoder_output_data_advertiser.dir/build.make:76: CMakeFiles/autoencoder_output_data_advertiser.dir/src/examples/advertisers/autoencoder_output_data_advertiser.cpp.o] Error 1\n'}
+[14.343758] (px4_ros_com) StderrLine: {'line': b'make[1]: *** [CMakeFiles/Makefile2:309: CMakeFiles/autoencoder_output_data_advertiser.dir/all] Error 2\n'}
+[14.344509] (px4_ros_com) StderrLine: {'line': b'make[1]: *** Waiting for unfinished jobs....\n'}
+[14.361571] (-) TimerEvent: {}
+[14.462529] (-) TimerEvent: {}
+[14.563607] (-) TimerEvent: {}
+[14.664611] (-) TimerEvent: {}
+[14.765452] (-) TimerEvent: {}
+[14.866371] (-) TimerEvent: {}
+[14.967209] (-) TimerEvent: {}
+[15.068032] (-) TimerEvent: {}
+[15.168895] (-) TimerEvent: {}
+[15.269778] (-) TimerEvent: {}
+[15.370689] (-) TimerEvent: {}
+[15.471542] (-) TimerEvent: {}
+[15.572427] (-) TimerEvent: {}
+[15.673321] (-) TimerEvent: {}
+[15.774159] (-) TimerEvent: {}
+[15.875050] (-) TimerEvent: {}
+[15.975966] (-) TimerEvent: {}
+[16.076842] (-) TimerEvent: {}
+[16.177699] (-) TimerEvent: {}
+[16.278573] (-) TimerEvent: {}
+[16.379456] (-) TimerEvent: {}
+[16.480349] (-) TimerEvent: {}
+[16.581216] (-) TimerEvent: {}
+[16.682074] (-) TimerEvent: {}
+[16.782965] (-) TimerEvent: {}
+[16.883839] (-) TimerEvent: {}
+[16.984711] (-) TimerEvent: {}
+[17.085566] (-) TimerEvent: {}
+[17.186424] (-) TimerEvent: {}
+[17.287280] (-) TimerEvent: {}
+[17.388156] (-) TimerEvent: {}
+[17.489030] (-) TimerEvent: {}
+[17.590549] (-) TimerEvent: {}
+[17.691732] (-) TimerEvent: {}
+[17.792587] (-) TimerEvent: {}
+[17.893751] (-) TimerEvent: {}
+[17.994696] (-) TimerEvent: {}
+[18.095553] (-) TimerEvent: {}
+[18.196424] (-) TimerEvent: {}
+[18.297307] (-) TimerEvent: {}
+[18.398264] (-) TimerEvent: {}
+[18.499117] (-) TimerEvent: {}
+[18.600183] (-) TimerEvent: {}
+[18.701646] (-) TimerEvent: {}
+[18.802654] (-) TimerEvent: {}
+[18.863778] (px4_ros_com) StdoutLine: {'line': b'[ 94%] \x1b[32m\x1b[1mLinking CXX executable offboard_control_srv\x1b[0m\n'}
+[18.902841] (-) TimerEvent: {}
+[19.003779] (-) TimerEvent: {}
+[19.104845] (-) TimerEvent: {}
+[19.206080] (-) TimerEvent: {}
+[19.307516] (-) TimerEvent: {}
+[19.408553] (-) TimerEvent: {}
+[19.509599] (-) TimerEvent: {}
+[19.610413] (-) TimerEvent: {}
+[19.711286] (-) TimerEvent: {}
+[19.812165] (-) TimerEvent: {}
+[19.813592] (px4_ros_com) StdoutLine: {'line': b'[ 94%] Built target offboard_control_srv\n'}
+[19.816335] (px4_ros_com) StderrLine: {'line': b'make: *** [Makefile:146: all] Error 2\n'}
+[19.821736] (px4_ros_com) CommandEnded: {'returncode': 2}
+[19.869794] (px4_ros_com) JobEnded: {'identifier': 'px4_ros_com', 'rc': 2}
+[19.874287] (-) EventReactorShutdown: {}

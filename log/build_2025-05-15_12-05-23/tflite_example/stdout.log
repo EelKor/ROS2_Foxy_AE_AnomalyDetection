@@ -1,0 +1,35 @@
+running egg_info
+creating ../build/tflite_example/tflite_example.egg-info
+writing ../build/tflite_example/tflite_example.egg-info/PKG-INFO
+writing dependency_links to ../build/tflite_example/tflite_example.egg-info/dependency_links.txt
+writing entry points to ../build/tflite_example/tflite_example.egg-info/entry_points.txt
+writing requirements to ../build/tflite_example/tflite_example.egg-info/requires.txt
+writing top-level names to ../build/tflite_example/tflite_example.egg-info/top_level.txt
+writing manifest file '../build/tflite_example/tflite_example.egg-info/SOURCES.txt'
+reading manifest file '../build/tflite_example/tflite_example.egg-info/SOURCES.txt'
+writing manifest file '../build/tflite_example/tflite_example.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /root/ros2_ws/src/build/tflite_example/build
+creating /root/ros2_ws/src/build/tflite_example/build/lib
+creating /root/ros2_ws/src/build/tflite_example/build/lib/tflite_example
+copying tflite_example/tflite_node.py -> /root/ros2_ws/src/build/tflite_example/build/lib/tflite_example
+copying tflite_example/__init__.py -> /root/ros2_ws/src/build/tflite_example/build/lib/tflite_example
+running install
+running install_lib
+creating /root/ros2_ws/src/install/tflite_example/lib/python3.8/site-packages/tflite_example
+copying /root/ros2_ws/src/build/tflite_example/build/lib/tflite_example/tflite_node.py -> /root/ros2_ws/src/install/tflite_example/lib/python3.8/site-packages/tflite_example
+copying /root/ros2_ws/src/build/tflite_example/build/lib/tflite_example/__init__.py -> /root/ros2_ws/src/install/tflite_example/lib/python3.8/site-packages/tflite_example
+byte-compiling /root/ros2_ws/src/install/tflite_example/lib/python3.8/site-packages/tflite_example/tflite_node.py to tflite_node.cpython-38.pyc
+byte-compiling /root/ros2_ws/src/install/tflite_example/lib/python3.8/site-packages/tflite_example/__init__.py to __init__.cpython-38.pyc
+running install_data
+creating /root/ros2_ws/src/install/tflite_example/share/ament_index
+creating /root/ros2_ws/src/install/tflite_example/share/ament_index/resource_index
+creating /root/ros2_ws/src/install/tflite_example/share/ament_index/resource_index/packages
+copying resource/tflite_example -> /root/ros2_ws/src/install/tflite_example/share/ament_index/resource_index/packages
+copying package.xml -> /root/ros2_ws/src/install/tflite_example/share/tflite_example
+running install_egg_info
+Copying ../build/tflite_example/tflite_example.egg-info to /root/ros2_ws/src/install/tflite_example/lib/python3.8/site-packages/tflite_example-0.0.0-py3.8.egg-info
+running install_scripts
+Installing tflite_node script to /root/ros2_ws/src/install/tflite_example/lib/tflite_example
+writing list of installed files to '/root/ros2_ws/src/build/tflite_example/install.log'

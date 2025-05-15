@@ -1,0 +1,89 @@
+[33mCMake Warning (dev) at /opt/ros/foxy/share/ament_cmake_core/cmake/core/python.cmake:22 (find_package):
+  Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules
+  are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use
+  the cmake_policy command to set the policy and suppress this warning.
+
+Call Stack (most recent call first):
+  /opt/ros/foxy/share/ament_cmake_core/cmake/core/all.cmake:53 (include)
+  /opt/ros/foxy/share/ament_cmake_core/cmake/ament_cmake_core-extras.cmake:17 (include)
+  /opt/ros/foxy/share/ament_cmake_core/cmake/ament_cmake_coreConfig.cmake:41 (include)
+  /opt/ros/foxy/share/ament_cmake/cmake/ament_cmake_export_dependencies-extras.cmake:15 (find_package)
+  /opt/ros/foxy/share/ament_cmake/cmake/ament_cmakeConfig.cmake:41 (include)
+  CMakeLists.txt:19 (find_package)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+[0m
+[01m[K/root/ros2_ws/src/px4_ros_com/src/examples/advertisers/autoencoder_input_data_advertiser.cpp:[m[K In member function ‘[01m[Kvoid AutoencoderInputDataAdvertiser::publish_data()[m[K’:
+[01m[K/root/ros2_ws/src/px4_ros_com/src/examples/advertisers/autoencoder_input_data_advertiser.cpp:164:17:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[K((AutoencoderInputDataAdvertiser*)this)->AutoencoderInputDataAdvertiser::timestamp_[m[K’ from ‘[01m[Klong unsigned int[m[K’ to ‘[01m[Kdouble[m[K’ [[01;35m[K-Wnarrowing[m[K]
+  164 |                 [01;35m[Ktimestamp_[m[K, // timestamp
+      |                 [01;35m[K^~~~~~~~~~[m[K
+[01m[K/root/ros2_ws/src/px4_ros_com/src/examples/advertisers/autoencoder_input_data_advertiser.cpp:164:17:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[K((AutoencoderInputDataAdvertiser*)this)->AutoencoderInputDataAdvertiser::timestamp_[m[K’ from ‘[01m[Klong unsigned int[m[K’ to ‘[01m[Kdouble[m[K’ [[01;35m[K-Wnarrowing[m[K]
+[01m[K/root/ros2_ws/src/px4_ros_com/src/examples/advertisers/autoencoder_output_data_advertiser.cpp:53:38:[m[K [01;31m[Kerror: [m[K‘[01m[KAutoencoderOutput[m[K’ is not a member of ‘[01m[Kpx4_msgs::msg[m[K’; did you mean ‘[01m[KAutoencoderOutputs[m[K’?
+   53 |     rclcpp::Publisher<px4_msgs::msg::[01;31m[KAutoencoderOutput[m[K>::SharedPtr publisher_;
+      |                                      [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+      |                                      [32m[KAutoencoderOutputs[m[K
+[01m[K/root/ros2_ws/src/px4_ros_com/src/examples/advertisers/autoencoder_output_data_advertiser.cpp:53:38:[m[K [01;31m[Kerror: [m[K‘[01m[KAutoencoderOutput[m[K’ is not a member of ‘[01m[Kpx4_msgs::msg[m[K’; did you mean ‘[01m[KAutoencoderOutputs[m[K’?
+   53 |     rclcpp::Publisher<px4_msgs::msg::[01;31m[KAutoencoderOutput[m[K>::SharedPtr publisher_;
+      |                                      [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+      |                                      [32m[KAutoencoderOutputs[m[K
+[01m[K/root/ros2_ws/src/px4_ros_com/src/examples/advertisers/autoencoder_output_data_advertiser.cpp:53:55:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   53 |     rclcpp::Publisher<px4_msgs::msg::AutoencoderOutput[01;31m[K>[m[K::SharedPtr publisher_;
+      |                                                       [01;31m[K^[m[K
+[01m[K/root/ros2_ws/src/px4_ros_com/src/examples/advertisers/autoencoder_output_data_advertiser.cpp:53:58:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+   53 |     rclcpp::Publisher<px4_msgs::msg::AutoencoderOutput>::[01;31m[KSharedPtr[m[K publisher_;
+      |                                                          [01;31m[K^~~~~~~~~[m[K
+      |                                                                   [32m[K;[m[K
+[01m[K/root/ros2_ws/src/px4_ros_com/src/examples/advertisers/autoencoder_output_data_advertiser.cpp:53:68:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublisher_[m[K’ does not name a type; did you mean ‘[01m[Krcl_publisher_t[m[K’?
+   53 |     rclcpp::Publisher<px4_msgs::msg::AutoencoderOutput>::SharedPtr [01;31m[Kpublisher_[m[K;
+      |                                                                    [01;31m[K^~~~~~~~~~[m[K
+      |                                                                    [32m[Krcl_publisher_t[m[K
+[01m[K/root/ros2_ws/src/px4_ros_com/src/examples/advertisers/autoencoder_output_data_advertiser.cpp:[m[K In constructor ‘[01m[KAutoencoderOutputDataAdvertiser::AutoencoderOutputDataAdvertiser()[m[K’:
+[01m[K/root/ros2_ws/src/px4_ros_com/src/examples/advertisers/autoencoder_output_data_advertiser.cpp:15:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublisher_[m[K’ was not declared in this scope; did you mean ‘[01m[Krcl_publisher_t[m[K’?
+   15 |         [01;31m[Kpublisher_[m[K = this->create_publisher<px4_msgs::msg::AutoencoderOutputs>(
+      |         [01;31m[K^~~~~~~~~~[m[K
+      |         [32m[Krcl_publisher_t[m[K
+[01m[K/root/ros2_ws/src/px4_ros_com/src/examples/advertisers/autoencoder_output_data_advertiser.cpp:[m[K In member function ‘[01m[Kvoid AutoencoderOutputDataAdvertiser::callback(std_msgs::msg::Float64_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/root/ros2_ws/src/px4_ros_com/src/examples/advertisers/autoencoder_output_data_advertiser.cpp:30:33:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Ksize[m[K’ in ‘[01m[K((const std::__shared_ptr_access<std_msgs::msg::Float64_<std::allocator<void> >, __gnu_cxx::_S_atomic, false, false>*)(& msg))->std::__shared_ptr_access<std_msgs::msg::Float64_<std::allocator<void> >, __gnu_cxx::_S_atomic, false, false>::operator->()->std_msgs::msg::Float64_<std::allocator<void> >::data[m[K’, which is of non-class type ‘[01m[Kstd_msgs::msg::Float64_<std::allocator<void> >::_data_type[m[K’ {aka ‘[01m[Kdouble[m[K’}
+   30 |         size_t size = msg->data.[01;31m[Ksize[m[K();
+      |                                 [01;31m[K^~~~[m[K
+[01m[K/root/ros2_ws/src/px4_ros_com/src/examples/advertisers/autoencoder_output_data_advertiser.cpp:37:35:[m[K [01;31m[Kerror: [m[Kinvalid types ‘[01m[Kstd_msgs::msg::Float64_<std::allocator<void> >::_data_type {aka double}[size_t {aka long unsigned int}][m[K’ for array subscript
+   37 |                 x[i] = msg->data[i[01;31m[K][m[K;
+      |                                   [01;31m[K^[m[K
+[01m[K/root/ros2_ws/src/px4_ros_com/src/examples/advertisers/autoencoder_output_data_advertiser.cpp:38:44:[m[K [01;31m[Kerror: [m[Kinvalid types ‘[01m[Kstd_msgs::msg::Float64_<std::allocator<void> >::_data_type {aka double}[size_t {aka long unsigned int}][m[K’ for array subscript
+   38 |                 x_hat[i] = msg->data[i + 12[01;31m[K][m[K;
+      |                                            [01;31m[K^[m[K
+[01m[K/root/ros2_ws/src/px4_ros_com/src/examples/advertisers/autoencoder_output_data_advertiser.cpp:47:29:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator=[m[K’ (operand types are ‘[01m[Kpx4_msgs::msg::AutoencoderOutputs_<std::allocator<void> >::_x_type[m[K’ {aka ‘[01m[Kstd::array<float, 12>[m[K’} and ‘[01m[Kstd::vector<double, std::allocator<double> >[m[K’)
+   47 |         autoencoder_msg.x = [01;31m[Kx[m[K;
+      |                             [01;31m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/tuple:39[m[K,
+                 from [01m[K/usr/include/c++/9/bits/unique_ptr.h:37[m[K,
+                 from [01m[K/usr/include/c++/9/memory:80[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:144[m[K,
+                 from [01m[K/root/ros2_ws/src/px4_ros_com/src/examples/advertisers/autoencoder_output_data_advertiser.cpp:1[m[K:
+[01m[K/usr/include/c++/9/array:94:12:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconstexpr std::array<float, 12>& std::array<float, 12>::operator=(const std::array<float, 12>&)[m[K’
+   94 |     struct [01;36m[Karray[m[K
+      |            [01;36m[K^~~~~[m[K
+[01m[K/usr/include/c++/9/array:94:12:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::vector<double, std::allocator<double> >[m[K’ to ‘[01m[Kconst std::array<float, 12>&[m[K’
+[01m[K/usr/include/c++/9/array:94:12:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconstexpr std::array<float, 12>& std::array<float, 12>::operator=(std::array<float, 12>&&)[m[K’
+[01m[K/usr/include/c++/9/array:94:12:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::vector<double, std::allocator<double> >[m[K’ to ‘[01m[Kstd::array<float, 12>&&[m[K’
+[01m[K/root/ros2_ws/src/px4_ros_com/src/examples/advertisers/autoencoder_output_data_advertiser.cpp:48:33:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator=[m[K’ (operand types are ‘[01m[Kpx4_msgs::msg::AutoencoderOutputs_<std::allocator<void> >::_x_hat_type[m[K’ {aka ‘[01m[Kstd::array<float, 12>[m[K’} and ‘[01m[Kstd::vector<double, std::allocator<double> >[m[K’)
+   48 |         autoencoder_msg.x_hat = [01;31m[Kx_hat[m[K;
+      |                                 [01;31m[K^~~~~[m[K
+In file included from [01m[K/usr/include/c++/9/tuple:39[m[K,
+                 from [01m[K/usr/include/c++/9/bits/unique_ptr.h:37[m[K,
+                 from [01m[K/usr/include/c++/9/memory:80[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:144[m[K,
+                 from [01m[K/root/ros2_ws/src/px4_ros_com/src/examples/advertisers/autoencoder_output_data_advertiser.cpp:1[m[K:
+[01m[K/usr/include/c++/9/array:94:12:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconstexpr std::array<float, 12>& std::array<float, 12>::operator=(const std::array<float, 12>&)[m[K’
+   94 |     struct [01;36m[Karray[m[K
+      |            [01;36m[K^~~~~[m[K
+[01m[K/usr/include/c++/9/array:94:12:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::vector<double, std::allocator<double> >[m[K’ to ‘[01m[Kconst std::array<float, 12>&[m[K’
+[01m[K/usr/include/c++/9/array:94:12:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconstexpr std::array<float, 12>& std::array<float, 12>::operator=(std::array<float, 12>&&)[m[K’
+[01m[K/usr/include/c++/9/array:94:12:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::vector<double, std::allocator<double> >[m[K’ to ‘[01m[Kstd::array<float, 12>&&[m[K’
+[01m[K/root/ros2_ws/src/px4_ros_com/src/examples/advertisers/autoencoder_output_data_advertiser.cpp:49:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublisher_[m[K’ was not declared in this scope; did you mean ‘[01m[Krcl_publisher_t[m[K’?
+   49 |         [01;31m[Kpublisher_[m[K->publish(autoencoder_msg);
+      |         [01;31m[K^~~~~~~~~~[m[K
+      |         [32m[Krcl_publisher_t[m[K
+make[2]: *** [CMakeFiles/autoencoder_output_data_advertiser.dir/build.make:76: CMakeFiles/autoencoder_output_data_advertiser.dir/src/examples/advertisers/autoencoder_output_data_advertiser.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:309: CMakeFiles/autoencoder_output_data_advertiser.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+make: *** [Makefile:146: all] Error 2

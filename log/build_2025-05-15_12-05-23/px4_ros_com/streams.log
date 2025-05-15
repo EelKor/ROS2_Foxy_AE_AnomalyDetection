@@ -1,0 +1,168 @@
+[0.051s] Invoking command in '/root/ros2_ws/src/build/px4_ros_com': AMENT_PREFIX_PATH=/root/ros2_ws/src/install/px4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/root/ros2_ws/src/install/px4_msgs:/opt/ros/foxy LD_LIBRARY_PATH=/root/ros2_ws/src/install/px4_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/root/ros2_ws/src/install/px4_msgs/lib/python3.8/site-packages:${PYTHONPATH} /usr/local/bin/cmake /root/ros2_ws/src/px4_ros_com -DCMAKE_INSTALL_PREFIX=/root/ros2_ws/src/install/px4_ros_com
+[0.289s] -- The C compiler identification is GNU 9.4.0
+[0.547s] -- The CXX compiler identification is GNU 9.4.0
+[0.596s] -- Detecting C compiler ABI info
+[0.905s] -- Detecting C compiler ABI info - done
+[0.968s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.969s] -- Detecting C compile features
+[0.971s] -- Detecting C compile features - done
+[0.989s] -- Detecting CXX compiler ABI info
+[1.322s] -- Detecting CXX compiler ABI info - done
+[1.389s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.391s] -- Detecting CXX compile features
+[1.394s] -- Detecting CXX compile features - done
+[1.420s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[1.459s] [33mCMake Warning (dev) at /opt/ros/foxy/share/ament_cmake_core/cmake/core/python.cmake:22 (find_package):
+[1.459s]   Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules
+[1.460s]   are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use
+[1.460s]   the cmake_policy command to set the policy and suppress this warning.
+[1.460s] 
+[1.461s] Call Stack (most recent call first):
+[1.461s]   /opt/ros/foxy/share/ament_cmake_core/cmake/core/all.cmake:53 (include)
+[1.461s]   /opt/ros/foxy/share/ament_cmake_core/cmake/ament_cmake_core-extras.cmake:17 (include)
+[1.462s]   /opt/ros/foxy/share/ament_cmake_core/cmake/ament_cmake_coreConfig.cmake:41 (include)
+[1.462s]   /opt/ros/foxy/share/ament_cmake/cmake/ament_cmake_export_dependencies-extras.cmake:15 (find_package)
+[1.463s]   /opt/ros/foxy/share/ament_cmake/cmake/ament_cmakeConfig.cmake:41 (include)
+[1.463s]   CMakeLists.txt:19 (find_package)
+[1.463s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[1.464s] [0m
+[1.563s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3")
+[1.563s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[2.621s] -- Found builtin_interfaces: 1.0.0 (/opt/ros/foxy/share/builtin_interfaces/cmake)
+[2.848s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[2.911s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[3.524s] -- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "1.1.1f")
+[3.791s] -- Found FastRTPS: /opt/ros/foxy/include
+[4.450s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[4.613s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/foxy/share/eigen3_cmake_module/cmake)
+[4.645s] -- Found Eigen3: TRUE (found version "3.3.7")
+[4.665s] -- Found geometry_msgs: 2.0.5 (/opt/ros/foxy/share/geometry_msgs/cmake)
+[5.030s] -- Found px4_msgs: 2.0.1 (/root/ros2_ws/src/install/px4_msgs/share/px4_msgs/cmake)
+[5.122s] -- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)
+[5.454s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[5.464s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[5.473s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[5.811s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+[5.814s] -- Looking for pthread_create in pthreads
+[6.080s] -- Looking for pthread_create in pthreads - not found
+[6.081s] -- Looking for pthread_create in pthread
+[6.387s] -- Looking for pthread_create in pthread - found
+[6.393s] -- Found Threads: TRUE
+[7.130s] -- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)
+[7.467s] -- Found rclpy: 1.0.13 (/opt/ros/foxy/share/rclpy/cmake)
+[7.533s] -- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[8.704s] -- Added test 'copyright' to check source files copyright and LICENSE
+[8.730s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[8.735s] -- Configured cppcheck include dirs: /root/ros2_ws/src/px4_ros_com/include;$<BUILD_INTERFACE:/root/ros2_ws/src/px4_ros_com/include/px4_ros_com>
+[8.735s] -- Configured cppcheck exclude dirs and/or files: 
+[8.760s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[8.761s] -- Configured cpplint exclude dirs and/or files: 
+[8.766s] -- Added test 'flake8' to check Python code syntax and style conventions
+[8.775s] -- Added test 'lint_cmake' to check CMake code style
+[8.781s] -- Added test 'pep257' to check Python code against some of the style conventions in PEP 257
+[8.806s] -- Added test 'uncrustify' to check C / C++ code style
+[8.806s] -- Configured uncrustify additional arguments: 
+[8.812s] -- Added test 'xmllint' to check XML markup files
+[8.828s] -- Configuring done (8.8s)
+[9.028s] -- Generating done (0.2s)
+[9.070s] -- Build files have been written to: /root/ros2_ws/src/build/px4_ros_com
+[9.114s] Invoked command in '/root/ros2_ws/src/build/px4_ros_com' returned '0': AMENT_PREFIX_PATH=/root/ros2_ws/src/install/px4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/root/ros2_ws/src/install/px4_msgs:/opt/ros/foxy LD_LIBRARY_PATH=/root/ros2_ws/src/install/px4_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/root/ros2_ws/src/install/px4_msgs/lib/python3.8/site-packages:${PYTHONPATH} /usr/local/bin/cmake /root/ros2_ws/src/px4_ros_com -DCMAKE_INSTALL_PREFIX=/root/ros2_ws/src/install/px4_ros_com
+[9.125s] Invoking command in '/root/ros2_ws/src/build/px4_ros_com': AMENT_PREFIX_PATH=/root/ros2_ws/src/install/px4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/root/ros2_ws/src/install/px4_msgs:/opt/ros/foxy LD_LIBRARY_PATH=/root/ros2_ws/src/install/px4_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/root/ros2_ws/src/install/px4_msgs/lib/python3.8/site-packages:${PYTHONPATH} /usr/local/bin/cmake --build /root/ros2_ws/src/build/px4_ros_com -- -j4 -l4
+[9.282s] [  5%] [32mBuilding CXX object CMakeFiles/frame_transforms.dir/src/lib/frame_transforms.cpp.o[0m
+[9.286s] [ 11%] [32mBuilding CXX object CMakeFiles/sensor_combined_listener.dir/src/examples/listeners/sensor_combined_listener.cpp.o[0m
+[9.300s] [ 16%] [32mBuilding CXX object CMakeFiles/vehicle_gps_position_listener.dir/src/examples/listeners/vehicle_gps_position_listener.cpp.o[0m
+[9.320s] [ 22%] [32mBuilding CXX object CMakeFiles/debug_vect_advertiser.dir/src/examples/advertisers/debug_vect_advertiser.cpp.o[0m
+[30.021s] [ 27%] [32m[1mLinking CXX executable debug_vect_advertiser[0m
+[31.563s] [ 27%] Built target debug_vect_advertiser
+[31.701s] [ 33%] [32mBuilding CXX object CMakeFiles/autoencoder_input_data_advertiser.dir/src/examples/advertisers/autoencoder_input_data_advertiser.cpp.o[0m
+[38.525s] [ 38%] [32m[1mLinking CXX executable sensor_combined_listener[0m
+[38.904s] [ 44%] [32m[1mLinking CXX executable vehicle_gps_position_listener[0m
+[40.453s] [ 44%] Built target sensor_combined_listener
+[40.472s] [ 44%] Built target vehicle_gps_position_listener
+[42.517s] [01m[K/root/ros2_ws/src/px4_ros_com/src/examples/advertisers/autoencoder_input_data_advertiser.cpp:[m[K In member function ‘[01m[Kvoid AutoencoderInputDataAdvertiser::publish_data()[m[K’:
+[42.518s] [01m[K/root/ros2_ws/src/px4_ros_com/src/examples/advertisers/autoencoder_input_data_advertiser.cpp:164:17:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[K((AutoencoderInputDataAdvertiser*)this)->AutoencoderInputDataAdvertiser::timestamp_[m[K’ from ‘[01m[Klong unsigned int[m[K’ to ‘[01m[Kdouble[m[K’ [[01;35m[K-Wnarrowing[m[K]
+[42.518s]   164 |                 [01;35m[Ktimestamp_[m[K, // timestamp
+[42.519s]       |                 [01;35m[K^~~~~~~~~~[m[K
+[42.520s] [01m[K/root/ros2_ws/src/px4_ros_com/src/examples/advertisers/autoencoder_input_data_advertiser.cpp:164:17:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[K((AutoencoderInputDataAdvertiser*)this)->AutoencoderInputDataAdvertiser::timestamp_[m[K’ from ‘[01m[Klong unsigned int[m[K’ to ‘[01m[Kdouble[m[K’ [[01;35m[K-Wnarrowing[m[K]
+[43.532s] [ 50%] [32mBuilding CXX object CMakeFiles/autoencoder_output_data_advertiser.dir/src/examples/advertisers/autoencoder_output_data_advertiser.cpp.o[0m
+[44.580s] [ 55%] [32mBuilding CXX object CMakeFiles/failuire_detector.dir/src/examples/advertisers/failure_detector.cpp.o[0m
+[47.807s] [ 61%] [32m[1mLinking CXX shared library libframe_transforms.so[0m
+[49.160s] [ 61%] Built target frame_transforms
+[49.222s] [ 66%] [32mBuilding CXX object CMakeFiles/offboard_control.dir/src/examples/offboard/offboard_control.cpp.o[0m
+[52.221s] [01m[K/root/ros2_ws/src/px4_ros_com/src/examples/advertisers/autoencoder_output_data_advertiser.cpp:53:38:[m[K [01;31m[Kerror: [m[K‘[01m[KAutoencoderOutput[m[K’ is not a member of ‘[01m[Kpx4_msgs::msg[m[K’; did you mean ‘[01m[KAutoencoderOutputs[m[K’?
+[52.222s]    53 |     rclcpp::Publisher<px4_msgs::msg::[01;31m[KAutoencoderOutput[m[K>::SharedPtr publisher_;
+[52.223s]       |                                      [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[52.224s]       |                                      [32m[KAutoencoderOutputs[m[K
+[52.225s] [01m[K/root/ros2_ws/src/px4_ros_com/src/examples/advertisers/autoencoder_output_data_advertiser.cpp:53:38:[m[K [01;31m[Kerror: [m[K‘[01m[KAutoencoderOutput[m[K’ is not a member of ‘[01m[Kpx4_msgs::msg[m[K’; did you mean ‘[01m[KAutoencoderOutputs[m[K’?
+[52.226s]    53 |     rclcpp::Publisher<px4_msgs::msg::[01;31m[KAutoencoderOutput[m[K>::SharedPtr publisher_;
+[52.228s]       |                                      [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[52.229s]       |                                      [32m[KAutoencoderOutputs[m[K
+[52.230s] [01m[K/root/ros2_ws/src/px4_ros_com/src/examples/advertisers/autoencoder_output_data_advertiser.cpp:53:55:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[52.248s]    53 |     rclcpp::Publisher<px4_msgs::msg::AutoencoderOutput[01;31m[K>[m[K::SharedPtr publisher_;
+[52.249s]       |                                                       [01;31m[K^[m[K
+[52.250s] [01m[K/root/ros2_ws/src/px4_ros_com/src/examples/advertisers/autoencoder_output_data_advertiser.cpp:53:58:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+[52.251s]    53 |     rclcpp::Publisher<px4_msgs::msg::AutoencoderOutput>::[01;31m[KSharedPtr[m[K publisher_;
+[52.251s]       |                                                          [01;31m[K^~~~~~~~~[m[K
+[52.252s]       |                                                                   [32m[K;[m[K
+[52.253s] [01m[K/root/ros2_ws/src/px4_ros_com/src/examples/advertisers/autoencoder_output_data_advertiser.cpp:53:68:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublisher_[m[K’ does not name a type; did you mean ‘[01m[Krcl_publisher_t[m[K’?
+[52.254s]    53 |     rclcpp::Publisher<px4_msgs::msg::AutoencoderOutput>::SharedPtr [01;31m[Kpublisher_[m[K;
+[52.255s]       |                                                                    [01;31m[K^~~~~~~~~~[m[K
+[52.256s]       |                                                                    [32m[Krcl_publisher_t[m[K
+[52.319s] [01m[K/root/ros2_ws/src/px4_ros_com/src/examples/advertisers/autoencoder_output_data_advertiser.cpp:[m[K In constructor ‘[01m[KAutoencoderOutputDataAdvertiser::AutoencoderOutputDataAdvertiser()[m[K’:
+[52.319s] [01m[K/root/ros2_ws/src/px4_ros_com/src/examples/advertisers/autoencoder_output_data_advertiser.cpp:15:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublisher_[m[K’ was not declared in this scope; did you mean ‘[01m[Krcl_publisher_t[m[K’?
+[52.320s]    15 |         [01;31m[Kpublisher_[m[K = this->create_publisher<px4_msgs::msg::AutoencoderOutputs>(
+[52.321s]       |         [01;31m[K^~~~~~~~~~[m[K
+[52.322s]       |         [32m[Krcl_publisher_t[m[K
+[52.354s] [01m[K/root/ros2_ws/src/px4_ros_com/src/examples/advertisers/autoencoder_output_data_advertiser.cpp:[m[K In member function ‘[01m[Kvoid AutoencoderOutputDataAdvertiser::callback(std_msgs::msg::Float64_<std::allocator<void> >::SharedPtr)[m[K’:
+[52.355s] [01m[K/root/ros2_ws/src/px4_ros_com/src/examples/advertisers/autoencoder_output_data_advertiser.cpp:30:33:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Ksize[m[K’ in ‘[01m[K((const std::__shared_ptr_access<std_msgs::msg::Float64_<std::allocator<void> >, __gnu_cxx::_S_atomic, false, false>*)(& msg))->std::__shared_ptr_access<std_msgs::msg::Float64_<std::allocator<void> >, __gnu_cxx::_S_atomic, false, false>::operator->()->std_msgs::msg::Float64_<std::allocator<void> >::data[m[K’, which is of non-class type ‘[01m[Kstd_msgs::msg::Float64_<std::allocator<void> >::_data_type[m[K’ {aka ‘[01m[Kdouble[m[K’}
+[52.356s]    30 |         size_t size = msg->data.[01;31m[Ksize[m[K();
+[52.357s]       |                                 [01;31m[K^~~~[m[K
+[52.362s] [01m[K/root/ros2_ws/src/px4_ros_com/src/examples/advertisers/autoencoder_output_data_advertiser.cpp:37:35:[m[K [01;31m[Kerror: [m[Kinvalid types ‘[01m[Kstd_msgs::msg::Float64_<std::allocator<void> >::_data_type {aka double}[size_t {aka long unsigned int}][m[K’ for array subscript
+[52.363s]    37 |                 x[i] = msg->data[i[01;31m[K][m[K;
+[52.364s]       |                                   [01;31m[K^[m[K
+[52.366s] [01m[K/root/ros2_ws/src/px4_ros_com/src/examples/advertisers/autoencoder_output_data_advertiser.cpp:38:44:[m[K [01;31m[Kerror: [m[Kinvalid types ‘[01m[Kstd_msgs::msg::Float64_<std::allocator<void> >::_data_type {aka double}[size_t {aka long unsigned int}][m[K’ for array subscript
+[52.367s]    38 |                 x_hat[i] = msg->data[i + 12[01;31m[K][m[K;
+[52.368s]       |                                            [01;31m[K^[m[K
+[52.370s] [01m[K/root/ros2_ws/src/px4_ros_com/src/examples/advertisers/autoencoder_output_data_advertiser.cpp:47:29:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator=[m[K’ (operand types are ‘[01m[Kpx4_msgs::msg::AutoencoderOutputs_<std::allocator<void> >::_x_type[m[K’ {aka ‘[01m[Kstd::array<float, 12>[m[K’} and ‘[01m[Kstd::vector<double, std::allocator<double> >[m[K’)
+[52.371s]    47 |         autoencoder_msg.x = [01;31m[Kx[m[K;
+[52.371s]       |                             [01;31m[K^[m[K
+[52.376s] In file included from [01m[K/usr/include/c++/9/tuple:39[m[K,
+[52.388s]                  from [01m[K/usr/include/c++/9/bits/unique_ptr.h:37[m[K,
+[52.389s]                  from [01m[K/usr/include/c++/9/memory:80[m[K,
+[52.390s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:144[m[K,
+[52.391s]                  from [01m[K/root/ros2_ws/src/px4_ros_com/src/examples/advertisers/autoencoder_output_data_advertiser.cpp:1[m[K:
+[52.392s] [01m[K/usr/include/c++/9/array:94:12:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconstexpr std::array<float, 12>& std::array<float, 12>::operator=(const std::array<float, 12>&)[m[K’
+[52.393s]    94 |     struct [01;36m[Karray[m[K
+[52.393s]       |            [01;36m[K^~~~~[m[K
+[52.394s] [01m[K/usr/include/c++/9/array:94:12:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::vector<double, std::allocator<double> >[m[K’ to ‘[01m[Kconst std::array<float, 12>&[m[K’
+[52.395s] [01m[K/usr/include/c++/9/array:94:12:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconstexpr std::array<float, 12>& std::array<float, 12>::operator=(std::array<float, 12>&&)[m[K’
+[52.396s] [01m[K/usr/include/c++/9/array:94:12:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::vector<double, std::allocator<double> >[m[K’ to ‘[01m[Kstd::array<float, 12>&&[m[K’
+[52.397s] [01m[K/root/ros2_ws/src/px4_ros_com/src/examples/advertisers/autoencoder_output_data_advertiser.cpp:48:33:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator=[m[K’ (operand types are ‘[01m[Kpx4_msgs::msg::AutoencoderOutputs_<std::allocator<void> >::_x_hat_type[m[K’ {aka ‘[01m[Kstd::array<float, 12>[m[K’} and ‘[01m[Kstd::vector<double, std::allocator<double> >[m[K’)
+[52.398s]    48 |         autoencoder_msg.x_hat = [01;31m[Kx_hat[m[K;
+[52.399s]       |                                 [01;31m[K^~~~~[m[K
+[52.400s] In file included from [01m[K/usr/include/c++/9/tuple:39[m[K,
+[52.400s]                  from [01m[K/usr/include/c++/9/bits/unique_ptr.h:37[m[K,
+[52.401s]                  from [01m[K/usr/include/c++/9/memory:80[m[K,
+[52.402s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:144[m[K,
+[52.403s]                  from [01m[K/root/ros2_ws/src/px4_ros_com/src/examples/advertisers/autoencoder_output_data_advertiser.cpp:1[m[K:
+[52.404s] [01m[K/usr/include/c++/9/array:94:12:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconstexpr std::array<float, 12>& std::array<float, 12>::operator=(const std::array<float, 12>&)[m[K’
+[52.404s]    94 |     struct [01;36m[Karray[m[K
+[52.405s]       |            [01;36m[K^~~~~[m[K
+[52.406s] [01m[K/usr/include/c++/9/array:94:12:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::vector<double, std::allocator<double> >[m[K’ to ‘[01m[Kconst std::array<float, 12>&[m[K’
+[52.407s] [01m[K/usr/include/c++/9/array:94:12:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconstexpr std::array<float, 12>& std::array<float, 12>::operator=(std::array<float, 12>&&)[m[K’
+[52.433s] [01m[K/usr/include/c++/9/array:94:12:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::vector<double, std::allocator<double> >[m[K’ to ‘[01m[Kstd::array<float, 12>&&[m[K’
+[52.434s] [01m[K/root/ros2_ws/src/px4_ros_com/src/examples/advertisers/autoencoder_output_data_advertiser.cpp:49:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublisher_[m[K’ was not declared in this scope; did you mean ‘[01m[Krcl_publisher_t[m[K’?
+[52.434s]    49 |         [01;31m[Kpublisher_[m[K->publish(autoencoder_msg);
+[52.435s]       |         [01;31m[K^~~~~~~~~~[m[K
+[52.436s]       |         [32m[Krcl_publisher_t[m[K
+[61.891s] make[2]: *** [CMakeFiles/autoencoder_output_data_advertiser.dir/build.make:76: CMakeFiles/autoencoder_output_data_advertiser.dir/src/examples/advertisers/autoencoder_output_data_advertiser.cpp.o] Error 1
+[61.893s] make[1]: *** [CMakeFiles/Makefile2:309: CMakeFiles/autoencoder_output_data_advertiser.dir/all] Error 2
+[61.894s] make[1]: *** Waiting for unfinished jobs....
+[71.201s] [ 72%] [32m[1mLinking CXX executable offboard_control[0m
+[72.328s] [ 72%] Built target offboard_control
+[74.675s] [ 77%] [32m[1mLinking CXX executable autoencoder_input_data_advertiser[0m
+[75.194s] [ 83%] [32m[1mLinking CXX executable failuire_detector[0m
+[76.486s] [ 83%] Built target autoencoder_input_data_advertiser
+[76.552s] [ 83%] Built target failuire_detector
+[76.555s] make: *** [Makefile:146: all] Error 2
+[76.560s] Invoked command in '/root/ros2_ws/src/build/px4_ros_com' returned '2': AMENT_PREFIX_PATH=/root/ros2_ws/src/install/px4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/root/ros2_ws/src/install/px4_msgs:/opt/ros/foxy LD_LIBRARY_PATH=/root/ros2_ws/src/install/px4_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/root/ros2_ws/src/install/px4_msgs/lib/python3.8/site-packages:${PYTHONPATH} /usr/local/bin/cmake --build /root/ros2_ws/src/build/px4_ros_com -- -j4 -l4

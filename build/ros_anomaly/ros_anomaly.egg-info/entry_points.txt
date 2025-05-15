@@ -1,0 +1,3 @@
+[console_scripts]
+rostf_anoamly = ros_anomaly.rostf_anomaly:main
+visualization = ros_anomaly.visualization:main

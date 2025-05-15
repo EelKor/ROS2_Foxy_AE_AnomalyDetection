@@ -1,0 +1,52 @@
+[6.424s] Invoking command in '/root/ros2_ws/src/tflite_example': PYTHONPATH=/root/ros2_ws/src/build/tflite_example/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/root/ros2_ws/src/install/tflite_example/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/tflite_example build --build-base /root/ros2_ws/src/build/tflite_example/build install --record /root/ros2_ws/src/build/tflite_example/install.log --install-scripts $base/lib/tflite_example --single-version-externally-managed install_data
+[7.203s] /usr/local/lib/python3.8/dist-packages/setuptools/dist.py:745: SetuptoolsDeprecationWarning: Invalid dash-separated options
+[7.203s] !!
+[7.204s] 
+[7.204s]         ********************************************************************************
+[7.205s]         Usage of dash-separated 'script-dir' will not be supported in future
+[7.206s]         versions. Please use the underscore name 'script_dir' instead.
+[7.206s] 
+[7.207s]         This deprecation is overdue, please update your project and remove deprecated
+[7.207s]         calls to avoid build errors in the future.
+[7.208s] 
+[7.208s]         See https://setuptools.pypa.io/en/latest/userguide/declarative_config.html for details.
+[7.209s]         ********************************************************************************
+[7.210s] 
+[7.210s] !!
+[7.213s]   opt = self.warn_dash_deprecation(opt, section)
+[8.179s] running egg_info
+[8.182s] creating ../build/tflite_example/tflite_example.egg-info
+[8.317s] writing ../build/tflite_example/tflite_example.egg-info/PKG-INFO
+[8.325s] writing dependency_links to ../build/tflite_example/tflite_example.egg-info/dependency_links.txt
+[8.327s] writing entry points to ../build/tflite_example/tflite_example.egg-info/entry_points.txt
+[8.330s] writing requirements to ../build/tflite_example/tflite_example.egg-info/requires.txt
+[8.333s] writing top-level names to ../build/tflite_example/tflite_example.egg-info/top_level.txt
+[9.147s] writing manifest file '../build/tflite_example/tflite_example.egg-info/SOURCES.txt'
+[9.411s] reading manifest file '../build/tflite_example/tflite_example.egg-info/SOURCES.txt'
+[9.415s] writing manifest file '../build/tflite_example/tflite_example.egg-info/SOURCES.txt'
+[9.416s] running build
+[9.416s] running build_py
+[9.419s] creating /root/ros2_ws/src/build/tflite_example/build
+[9.419s] creating /root/ros2_ws/src/build/tflite_example/build/lib
+[9.420s] creating /root/ros2_ws/src/build/tflite_example/build/lib/tflite_example
+[9.421s] copying tflite_example/tflite_node.py -> /root/ros2_ws/src/build/tflite_example/build/lib/tflite_example
+[9.422s] copying tflite_example/__init__.py -> /root/ros2_ws/src/build/tflite_example/build/lib/tflite_example
+[9.422s] running install
+[9.451s] running install_lib
+[9.556s] creating /root/ros2_ws/src/install/tflite_example/lib/python3.8/site-packages/tflite_example
+[9.558s] copying /root/ros2_ws/src/build/tflite_example/build/lib/tflite_example/tflite_node.py -> /root/ros2_ws/src/install/tflite_example/lib/python3.8/site-packages/tflite_example
+[9.561s] copying /root/ros2_ws/src/build/tflite_example/build/lib/tflite_example/__init__.py -> /root/ros2_ws/src/install/tflite_example/lib/python3.8/site-packages/tflite_example
+[9.562s] byte-compiling /root/ros2_ws/src/install/tflite_example/lib/python3.8/site-packages/tflite_example/tflite_node.py to tflite_node.cpython-38.pyc
+[9.565s] byte-compiling /root/ros2_ws/src/install/tflite_example/lib/python3.8/site-packages/tflite_example/__init__.py to __init__.cpython-38.pyc
+[9.569s] running install_data
+[9.571s] creating /root/ros2_ws/src/install/tflite_example/share/ament_index
+[9.572s] creating /root/ros2_ws/src/install/tflite_example/share/ament_index/resource_index
+[9.572s] creating /root/ros2_ws/src/install/tflite_example/share/ament_index/resource_index/packages
+[9.573s] copying resource/tflite_example -> /root/ros2_ws/src/install/tflite_example/share/ament_index/resource_index/packages
+[9.574s] copying package.xml -> /root/ros2_ws/src/install/tflite_example/share/tflite_example
+[9.575s] running install_egg_info
+[9.707s] Copying ../build/tflite_example/tflite_example.egg-info to /root/ros2_ws/src/install/tflite_example/lib/python3.8/site-packages/tflite_example-0.0.0-py3.8.egg-info
+[9.714s] running install_scripts
+[10.154s] Installing tflite_node script to /root/ros2_ws/src/install/tflite_example/lib/tflite_example
+[10.156s] writing list of installed files to '/root/ros2_ws/src/build/tflite_example/install.log'
+[10.316s] Invoked command in '/root/ros2_ws/src/tflite_example' returned '0': PYTHONPATH=/root/ros2_ws/src/build/tflite_example/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/root/ros2_ws/src/install/tflite_example/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/tflite_example build --build-base /root/ros2_ws/src/build/tflite_example/build install --record /root/ros2_ws/src/build/tflite_example/install.log --install-scripts $base/lib/tflite_example --single-version-externally-managed install_data

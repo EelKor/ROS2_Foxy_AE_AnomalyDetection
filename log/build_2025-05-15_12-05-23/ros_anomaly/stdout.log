@@ -1,0 +1,39 @@
+running egg_info
+creating ../build/ros_anomaly/ros_anomaly.egg-info
+writing ../build/ros_anomaly/ros_anomaly.egg-info/PKG-INFO
+writing dependency_links to ../build/ros_anomaly/ros_anomaly.egg-info/dependency_links.txt
+writing entry points to ../build/ros_anomaly/ros_anomaly.egg-info/entry_points.txt
+writing requirements to ../build/ros_anomaly/ros_anomaly.egg-info/requires.txt
+writing top-level names to ../build/ros_anomaly/ros_anomaly.egg-info/top_level.txt
+writing manifest file '../build/ros_anomaly/ros_anomaly.egg-info/SOURCES.txt'
+reading manifest file '../build/ros_anomaly/ros_anomaly.egg-info/SOURCES.txt'
+writing manifest file '../build/ros_anomaly/ros_anomaly.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /root/ros2_ws/src/build/ros_anomaly/build
+creating /root/ros2_ws/src/build/ros_anomaly/build/lib
+creating /root/ros2_ws/src/build/ros_anomaly/build/lib/ros_anomaly
+copying ros_anomaly/rostf_anomaly.py -> /root/ros2_ws/src/build/ros_anomaly/build/lib/ros_anomaly
+copying ros_anomaly/visualization.py -> /root/ros2_ws/src/build/ros_anomaly/build/lib/ros_anomaly
+copying ros_anomaly/__init__.py -> /root/ros2_ws/src/build/ros_anomaly/build/lib/ros_anomaly
+running install
+running install_lib
+creating /root/ros2_ws/src/install/ros_anomaly/lib/python3.8/site-packages/ros_anomaly
+copying /root/ros2_ws/src/build/ros_anomaly/build/lib/ros_anomaly/rostf_anomaly.py -> /root/ros2_ws/src/install/ros_anomaly/lib/python3.8/site-packages/ros_anomaly
+copying /root/ros2_ws/src/build/ros_anomaly/build/lib/ros_anomaly/visualization.py -> /root/ros2_ws/src/install/ros_anomaly/lib/python3.8/site-packages/ros_anomaly
+copying /root/ros2_ws/src/build/ros_anomaly/build/lib/ros_anomaly/__init__.py -> /root/ros2_ws/src/install/ros_anomaly/lib/python3.8/site-packages/ros_anomaly
+byte-compiling /root/ros2_ws/src/install/ros_anomaly/lib/python3.8/site-packages/ros_anomaly/rostf_anomaly.py to rostf_anomaly.cpython-38.pyc
+byte-compiling /root/ros2_ws/src/install/ros_anomaly/lib/python3.8/site-packages/ros_anomaly/visualization.py to visualization.cpython-38.pyc
+byte-compiling /root/ros2_ws/src/install/ros_anomaly/lib/python3.8/site-packages/ros_anomaly/__init__.py to __init__.cpython-38.pyc
+running install_data
+creating /root/ros2_ws/src/install/ros_anomaly/share/ament_index
+creating /root/ros2_ws/src/install/ros_anomaly/share/ament_index/resource_index
+creating /root/ros2_ws/src/install/ros_anomaly/share/ament_index/resource_index/packages
+copying resource/ros_anomaly -> /root/ros2_ws/src/install/ros_anomaly/share/ament_index/resource_index/packages
+copying package.xml -> /root/ros2_ws/src/install/ros_anomaly/share/ros_anomaly
+running install_egg_info
+Copying ../build/ros_anomaly/ros_anomaly.egg-info to /root/ros2_ws/src/install/ros_anomaly/lib/python3.8/site-packages/ros_anomaly-0.0.0-py3.8.egg-info
+running install_scripts
+Installing rostf_anoamly script to /root/ros2_ws/src/install/ros_anomaly/lib/ros_anomaly
+Installing visualization script to /root/ros2_ws/src/install/ros_anomaly/lib/ros_anomaly
+writing list of installed files to '/root/ros2_ws/src/build/ros_anomaly/install.log'

@@ -67,6 +67,11 @@ add_executable(failuire_detector src/examples/advertisers/failure_detector.cpp)
 ament_target_dependencies(failuire_detector rclcpp px4_msgs)
 install(TARGETS failuire_detector DESTINATION lib/${PROJECT_NAME})
 
+# examples/advertisers/autoencoder_output_data_advertiser
+add_executable(autoencoder_output_data_advertiser src/examples/advertisers/autoencoder_output_data_advertiser.cpp)
+ament_target_dependencies(autoencoder_output_data_advertiser rclcpp px4_msgs)
+install(TARGETS autoencoder_output_data_advertiser DESTINATION lib/${PROJECT_NAME})
+
 # examples/offboard/offboard_control
 add_executable(offboard_control src/examples/offboard/offboard_control.cpp)
 ament_target_dependencies(offboard_control rclcpp px4_msgs)

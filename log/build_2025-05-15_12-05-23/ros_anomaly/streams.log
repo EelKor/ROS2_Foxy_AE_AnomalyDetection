@@ -1,0 +1,56 @@
+[6.516s] Invoking command in '/root/ros2_ws/src/ros_anomaly': PYTHONPATH=/root/ros2_ws/src/build/ros_anomaly/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/root/ros2_ws/src/install/ros_anomaly/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/ros_anomaly build --build-base /root/ros2_ws/src/build/ros_anomaly/build install --record /root/ros2_ws/src/build/ros_anomaly/install.log --install-scripts $base/lib/ros_anomaly --single-version-externally-managed install_data
+[7.540s] /usr/local/lib/python3.8/dist-packages/setuptools/dist.py:745: SetuptoolsDeprecationWarning: Invalid dash-separated options
+[7.541s] !!
+[7.542s] 
+[7.543s]         ********************************************************************************
+[7.543s]         Usage of dash-separated 'script-dir' will not be supported in future
+[7.544s]         versions. Please use the underscore name 'script_dir' instead.
+[7.545s] 
+[7.546s]         This deprecation is overdue, please update your project and remove deprecated
+[7.547s]         calls to avoid build errors in the future.
+[7.548s] 
+[7.548s]         See https://setuptools.pypa.io/en/latest/userguide/declarative_config.html for details.
+[7.549s]         ********************************************************************************
+[7.550s] 
+[7.551s] !!
+[7.552s]   opt = self.warn_dash_deprecation(opt, section)
+[8.590s] running egg_info
+[8.592s] creating ../build/ros_anomaly/ros_anomaly.egg-info
+[8.717s] writing ../build/ros_anomaly/ros_anomaly.egg-info/PKG-INFO
+[8.722s] writing dependency_links to ../build/ros_anomaly/ros_anomaly.egg-info/dependency_links.txt
+[8.725s] writing entry points to ../build/ros_anomaly/ros_anomaly.egg-info/entry_points.txt
+[8.728s] writing requirements to ../build/ros_anomaly/ros_anomaly.egg-info/requires.txt
+[8.731s] writing top-level names to ../build/ros_anomaly/ros_anomaly.egg-info/top_level.txt
+[9.479s] writing manifest file '../build/ros_anomaly/ros_anomaly.egg-info/SOURCES.txt'
+[9.697s] reading manifest file '../build/ros_anomaly/ros_anomaly.egg-info/SOURCES.txt'
+[9.703s] writing manifest file '../build/ros_anomaly/ros_anomaly.egg-info/SOURCES.txt'
+[9.704s] running build
+[9.705s] running build_py
+[9.706s] creating /root/ros2_ws/src/build/ros_anomaly/build
+[9.708s] creating /root/ros2_ws/src/build/ros_anomaly/build/lib
+[9.709s] creating /root/ros2_ws/src/build/ros_anomaly/build/lib/ros_anomaly
+[9.711s] copying ros_anomaly/rostf_anomaly.py -> /root/ros2_ws/src/build/ros_anomaly/build/lib/ros_anomaly
+[9.713s] copying ros_anomaly/visualization.py -> /root/ros2_ws/src/build/ros_anomaly/build/lib/ros_anomaly
+[9.716s] copying ros_anomaly/__init__.py -> /root/ros2_ws/src/build/ros_anomaly/build/lib/ros_anomaly
+[9.718s] running install
+[9.751s] running install_lib
+[9.877s] creating /root/ros2_ws/src/install/ros_anomaly/lib/python3.8/site-packages/ros_anomaly
+[9.878s] copying /root/ros2_ws/src/build/ros_anomaly/build/lib/ros_anomaly/rostf_anomaly.py -> /root/ros2_ws/src/install/ros_anomaly/lib/python3.8/site-packages/ros_anomaly
+[9.879s] copying /root/ros2_ws/src/build/ros_anomaly/build/lib/ros_anomaly/visualization.py -> /root/ros2_ws/src/install/ros_anomaly/lib/python3.8/site-packages/ros_anomaly
+[9.880s] copying /root/ros2_ws/src/build/ros_anomaly/build/lib/ros_anomaly/__init__.py -> /root/ros2_ws/src/install/ros_anomaly/lib/python3.8/site-packages/ros_anomaly
+[9.885s] byte-compiling /root/ros2_ws/src/install/ros_anomaly/lib/python3.8/site-packages/ros_anomaly/rostf_anomaly.py to rostf_anomaly.cpython-38.pyc
+[9.892s] byte-compiling /root/ros2_ws/src/install/ros_anomaly/lib/python3.8/site-packages/ros_anomaly/visualization.py to visualization.cpython-38.pyc
+[9.902s] byte-compiling /root/ros2_ws/src/install/ros_anomaly/lib/python3.8/site-packages/ros_anomaly/__init__.py to __init__.cpython-38.pyc
+[9.903s] running install_data
+[9.904s] creating /root/ros2_ws/src/install/ros_anomaly/share/ament_index
+[9.905s] creating /root/ros2_ws/src/install/ros_anomaly/share/ament_index/resource_index
+[9.906s] creating /root/ros2_ws/src/install/ros_anomaly/share/ament_index/resource_index/packages
+[9.909s] copying resource/ros_anomaly -> /root/ros2_ws/src/install/ros_anomaly/share/ament_index/resource_index/packages
+[9.910s] copying package.xml -> /root/ros2_ws/src/install/ros_anomaly/share/ros_anomaly
+[9.911s] running install_egg_info
+[10.054s] Copying ../build/ros_anomaly/ros_anomaly.egg-info to /root/ros2_ws/src/install/ros_anomaly/lib/python3.8/site-packages/ros_anomaly-0.0.0-py3.8.egg-info
+[10.062s] running install_scripts
+[10.482s] Installing rostf_anoamly script to /root/ros2_ws/src/install/ros_anomaly/lib/ros_anomaly
+[10.483s] Installing visualization script to /root/ros2_ws/src/install/ros_anomaly/lib/ros_anomaly
+[10.484s] writing list of installed files to '/root/ros2_ws/src/build/ros_anomaly/install.log'
+[10.628s] Invoked command in '/root/ros2_ws/src/ros_anomaly' returned '0': PYTHONPATH=/root/ros2_ws/src/build/ros_anomaly/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/root/ros2_ws/src/install/ros_anomaly/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/ros_anomaly build --build-base /root/ros2_ws/src/build/ros_anomaly/build install --record /root/ros2_ws/src/build/ros_anomaly/install.log --install-scripts $base/lib/ros_anomaly --single-version-externally-managed install_data
