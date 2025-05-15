@@ -67,17 +67,17 @@ public:
             "/fmu/out/vehicle_attitude", qos,
             std::bind(&AutoencoderInputDataAdvertiser::attitude_callback, this, std::placeholders::_1));
             
-        vehicle_attitude_setpoint_subscription_ = this->create_subscription<px4_msgs::msg::VehicleAttitudeSetpoint>(
-            "/fmu/out/vehicle_attitude_setpoint", qos,
-            std::bind(&AutoencoderInputDataAdvertiser::attitude_setpoint_callback, this, std::placeholders::_1));
+        //vehicle_attitude_setpoint_subscription_ = this->create_subscription<px4_msgs::msg::VehicleAttitudeSetpoint>(
+        //    "/fmu/out/vehicle_attitude_setpoint", qos,
+        //    std::bind(&AutoencoderInputDataAdvertiser::attitude_setpoint_callback, this, std::placeholders::_1));
     
-        vehicle_rates_setpoint_subscription_ = this->create_subscription<px4_msgs::msg::VehicleRatesSetpoint>(
-            "/fmu/out/vehicle_rates_setpoint", qos,
-            std::bind(&AutoencoderInputDataAdvertiser::rates_setpoint_callback, this, std::placeholders::_1));
+        //vehicle_rates_setpoint_subscription_ = this->create_subscription<px4_msgs::msg::VehicleRatesSetpoint>(
+        //    "/fmu/out/vehicle_rates_setpoint", qos,
+        //    std::bind(&AutoencoderInputDataAdvertiser::rates_setpoint_callback, this, std::placeholders::_1));
 
-        actuator_outputs_subscription_ = this->create_subscription<px4_msgs::msg::ActuatorOutputs>(
-            "/fmu/out/actuator_outputs", qos,
-            std::bind(&AutoencoderInputDataAdvertiser::actuator_outputs_callback, this, std::placeholders::_1));
+        //actuator_outputs_subscription_ = this->create_subscription<px4_msgs::msg::ActuatorOutputs>(
+        //    "/fmu/out/actuator_outputs", qos,
+        //    std::bind(&AutoencoderInputDataAdvertiser::actuator_outputs_callback, this, std::placeholders::_1));
 
     
 		// 퍼블리셔 생성
@@ -118,7 +118,7 @@ private:
 		yaw_ = atan2(2.0f * (msg->q[0] * msg->q[3] + msg->q[1] * msg->q[2]),
                     1.0f - 2.0f * (msg->q[2] * msg->q[2] + msg->q[3] * msg->q[3]));
 	}
-
+/*
     void attitude_setpoint_callback(const px4_msgs::msg::VehicleAttitudeSetpoint::SharedPtr msg)
     {
         roll_sp_ = atan2(2.0f * (msg->q_d[0] * msg->q_d[1] + msg->q_d[2] * msg->q_d[3]),
@@ -141,9 +141,9 @@ private:
     {
         for(int i=0; i<12; i++) actuator_outputs_[i] = msg->output[i];
     }
-
+*/
 	// Float32MultiArray 데이터를 퍼블리시하는 함수
-	void publish_data()
+    void publish_data()
     {
         auto double_msg = std_msgs::msg::Float64MultiArray();
 
@@ -181,9 +181,9 @@ private:
 	// 멤버 변수
     rclcpp::Subscription<px4_msgs::msg::SensorCombined>::SharedPtr sensor_combined_subscription_;
     rclcpp::Subscription<px4_msgs::msg::VehicleAttitude>::SharedPtr vehicle_attitude_subscription_;
-    rclcpp::Subscription<px4_msgs::msg::VehicleAttitudeSetpoint>::SharedPtr vehicle_attitude_setpoint_subscription_;
-    rclcpp::Subscription<px4_msgs::msg::VehicleRatesSetpoint>::SharedPtr vehicle_rates_setpoint_subscription_;
-    rclcpp::Subscription<px4_msgs::msg::ActuatorOutputs>::SharedPtr actuator_outputs_subscription_;
+    //rclcpp::Subscription<px4_msgs::msg::VehicleAttitudeSetpoint>::SharedPtr vehicle_attitude_setpoint_subscription_;
+    //rclcpp::Subscription<px4_msgs::msg::VehicleRatesSetpoint>::SharedPtr vehicle_rates_setpoint_subscription_;
+    //rclcpp::Subscription<px4_msgs::msg::ActuatorOutputs>::SharedPtr actuator_outputs_subscription_;
 
     rclcpp::Publisher<std_msgs::msg::Float64MultiArray>::SharedPtr publisher_;
     rclcpp::Publisher<std_msgs::msg::UInt32>::SharedPtr publisher_dt_;
@@ -201,13 +201,13 @@ private:
     double roll_ = 0.0f, pitch_ = 0.0f, yaw_ = 0.0f;
 
     // Euler Angle Setpoints
-    double roll_sp_ = 0.0f, pitch_sp_ = 0.0f, yaw_sp_ = 0.0f;
+    //double roll_sp_ = 0.0f, pitch_sp_ = 0.0f, yaw_sp_ = 0.0f;
 
     // VehicleRatesSetpoint
-    double roll_rate_sp_ = 0.0f, pitch_rate_sp_= 0.0f, yaw_rate_sp_= 0.0f;
+    //double roll_rate_sp_ = 0.0f, pitch_rate_sp_= 0.0f, yaw_rate_sp_= 0.0f;
 
     //ActuaorOutputs
-    double actuator_outputs_[12] = {0.0};
+    //double actuator_outputs_[12] = {0.0};
 		
 };
 

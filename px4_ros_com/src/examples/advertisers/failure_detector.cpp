@@ -15,7 +15,7 @@ public:
 
 private:
     void error_callback(const std_msgs::msg::Float64::SharedPtr msg) {
-        if (msg->data >= 0.04) {
+        if (msg->data >= 0.065) {
             auto failsafe_msg = px4_msgs::msg::FailureDetectorStatus();
             failsafe_msg.timestamp = this->now().nanoseconds()/1000; 
             failsafe_msg.fd_motor = true;

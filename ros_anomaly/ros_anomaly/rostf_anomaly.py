@@ -65,7 +65,7 @@ class AutoencoderROS(Node):
         self.err_Theta = maxTheta_ - self.min_Theta
         self.err_Psi   = maxPsi_ - self.min_Psi
 
-        self.threshold = 0.07968564678921582
+        self.threshold = 0.2968564678921582
         self.stdD      = 0.007407137168589778
         self.maxMSE    = 0.1167213326321647
         self.margin    = 5.0
@@ -73,7 +73,7 @@ class AutoencoderROS(Node):
         self.inputData = np.array([])
 
     def init_param(self):
-        self.model_path = '/home/jetson/ws_anomaly_detection/src/ros_anomaly/model/model.tflite'
+        self.model_path = '/root/ros2_ws/src/ros_anomaly/model/model.tflite'
 
     def NormalizationMinMax(self, data):        
         input_Ax = (data[1] - self.min_Ax) / (self.err_Ax)
