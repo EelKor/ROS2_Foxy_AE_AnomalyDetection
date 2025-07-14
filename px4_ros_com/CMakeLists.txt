@@ -62,10 +62,10 @@ add_executable(autoencoder_input_data_advertiser src/examples/advertisers/autoen
 ament_target_dependencies(autoencoder_input_data_advertiser rclcpp px4_msgs)
 install(TARGETS autoencoder_input_data_advertiser DESTINATION lib/${PROJECT_NAME})
 
-# examples/advertisers/failuire_detector
-add_executable(failuire_detector src/examples/advertisers/failure_detector.cpp)
-ament_target_dependencies(failuire_detector rclcpp px4_msgs)
-install(TARGETS failuire_detector DESTINATION lib/${PROJECT_NAME})
+# examples/advertisers/autoencoder_result_publisher
+add_executable(autoencoder_result_publisher src/examples/advertisers/autoencoder_result_publisher.cpp)
+ament_target_dependencies(autoencoder_result_publisher rclcpp px4_msgs)
+install(TARGETS autoencoder_result_publisher DESTINATION lib/${PROJECT_NAME})
 
 # examples/offboard/offboard_control
 add_executable(offboard_control src/examples/offboard/offboard_control.cpp)
