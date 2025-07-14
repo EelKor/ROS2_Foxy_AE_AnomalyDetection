@@ -7,7 +7,7 @@ import rclpy
 
 from PIL import Image
 from rclpy.node import Node
-from std_msgs.msg import String, Float64MultiArray, Float64
+from std_msgs.msg import String, Float64MultiArray, Float64, Int32
 from ament_index_python.packages import get_package_share_directory
 
 class AutoencoderROS(Node):
@@ -16,7 +16,7 @@ class AutoencoderROS(Node):
         self.init_pubsub()
         self.init_value()
         self.init_param()
-
+        self.init_model()
         self.timer = self.create_timer(0.01, self.run)
 
     def init_pubsub(self):        
@@ -26,8 +26,9 @@ class AutoencoderROS(Node):
             self.listener_callback,
             10)
         
-        self.publisher_ = self.create_publisher(Float64, '/ad/out/reconstruction_error', 10)
-                
+        self.input_output_publisher_ = self.create_publisher(Float64MultiArray, '/autoencoder/input_outputs', 10)
+        self.size_publisher_ = self.create_publisher(Int32, '/autoencoder/size', 10)
+
     def init_value(self):
         maxAx_ = 1.69
         maxAy_ = 1.42
@@ -71,9 +72,19 @@ class AutoencoderROS(Node):
         self.margin    = 5.0
 
         self.inputData = np.array([])
+        self.outputData = np.array([])
 
     def init_param(self):
         self.model_path = '/root/ros2_ws/src/ros_anomaly/model/model.tflite'
+<<<<<<< HEAD
+=======
+
+    def init_model(self):
+        self.interpreter = tf.lite.Interpreter(model_path=self.model_path)
+        self.interpreter.allocate_tensors()
+        self.input_details = self.interpreter.get_input_details()
+        self.output_details = self.interpreter.get_output_details()
+>>>>>>> ksas
 
     def NormalizationMinMax(self, data):        
         input_Ax = (data[1] - self.min_Ax) / (self.err_Ax)
@@ -95,30 +106,23 @@ class AutoencoderROS(Node):
 
     def run(self):
         if self.inputData.size != 0: # Very Very Important condition, tip from D.H.Seo
-            # Load TFLite model
-            interpreter = tf.lite.Interpreter(model_path=self.model_path)
-            interpreter.allocate_tensors()
 
-            # Get input/output tensors
-            input_details = interpreter.get_input_details()
-            output_details = interpreter.get_output_details()
+            input_data_batch = np.expand_dims(self.inputData, axis=0).astype(np.float32)
 
-            inputData_ = tf.expand_dims(self.inputData, axis=0)
+            self.interpreter.set_tensor(self.input_details[0]['index'], input_data_batch)
+            self.interpreter.invoke()
+            output_data = self.interpreter.get_tensor(self.output_details[0]['index'])
+            output_data = np.squeeze(output_data, axis=0)
+    
+            ae_input_output_msg = Float64MultiArray()
+            ae_input_output_msg.data = self.inputData.tolist() +[-9999.0] + output_data.tolist()
+            self.input_output_publisher_.publish(ae_input_output_msg)
+
+            # Publish the size of the input data
+            size_msg = Int32()
+            size_msg.data = len(self.inputData)
+            self.size_publisher_.publish(size_msg)
             
-            # Set input tensor
-            interpreter.set_tensor(input_details[0]['index'], inputData_)
-
-            # Run inference
-            interpreter.invoke()
-
-            # Get output tensor
-            output_data = interpreter.get_tensor(output_details[0]['index'])
-            output_data = np.squeeze(output_data,axis=0)
-            mse = np.mean(np.power((inputData_ - output_data), 2), axis=1)
-            result_msg = Float64()
-            result_msg.data = float(mse)
-
-            self.publisher_.publish(result_msg)
 
 def main(args=None):
     rclpy.init(args=args)
